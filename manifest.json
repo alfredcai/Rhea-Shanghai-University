@@ -1,17 +1,18 @@
 {
   "manifest_version": 2,
-
   "name": "上海大学课程助手",
-  "description": "模拟用户动作自动选课和教学评估辅助",
   "version": "0.9",
-  "author": "Alfred Cai",
+
+  "description": "模拟用户动作自动选课和教学评估辅助",
   "icons": {
-    "128": "hand-gesture-cancel-fuck-rule-128.png"
+    "16":"icons/Aristotle_16.png",
+    "48":"icons/Aristotle_48.png",
+    "128": "icons/Aristotle_128.png"
   },
-  //"default_locale": "zh",
+  "author": "Alfred Cai",
 
   "browser_action": {
-    "default_icon": "hand-gesture-cancel-fuck-rule-128.png",
+    "default_icon": "icons/Aristotle_48.png",
     "default_popup": "popup.html",
     "default_title": "课程助手"
   },
@@ -30,13 +31,12 @@
     "js": ["scripts/beautifyTable.js"]
   }],
 
+  "background": {
+    "scripts": ["background.js", "lib/jquery-2.2.0.min.js"]
+  },
+
   "permissions": [
     "tabs",
     "storage"
-  ],
-
-  "background": {
-    "scripts": ["background.js", "lib/jquery-2.2.0.min.js"]
-  }
-
+  ]
 }
