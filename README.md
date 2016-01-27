@@ -1,11 +1,12 @@
 # Rhea
-上海大学课程助手 chrome插件(chrome extension)
+上海大学课程助手 -- chrome插件(chrome extension)
 
 - [实现功能](#实现功能)
 - [如何安装](#如何安装)
 - [使用说明](#使用说明)
 - [实现原理](#实现原理)
-- [License](#License)
+- [致谢](#致谢)
+- [License](#license)
 
 ## 实现功能
 - 模拟点击提交按钮自动刷课「暂未实现」
@@ -28,6 +29,11 @@
 - 调用JavaScript的setInterval方法点击提交按钮
 - 关于提交表单session并没有刷新的问题，只是粗糙的刷新的整个页面，利用插件支持的本地存储，将保存的课程号再次填入继续提交
 - 其他就是一些jQuery控制页面元素的调用没什么可说的
+
+## 致谢
+- 图标来自于[ICONFINDER](https://www.iconfinder.com/)的[https://www.iconfinder.com/icons/362069/aristotle_avatar_beard_face_greece_greek_philosopher_platonic_scientist_icon#size=128](https://www.iconfinder.com/icons/362069/aristotle_avatar_beard_face_greece_greek_philosopher_platonic_scientist_icon#size=128)
+- [jQuery](http://jquery.com)
+- [Bootstrap](http://getbootstrap.com)
 
 ## License
 - MIT licensed
