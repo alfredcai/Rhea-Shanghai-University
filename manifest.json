@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+
+  "name": "上海大学课程助手",
+  "description": "模拟用户动作自动选课和教学评估辅助",
+  "version": "0.9",
+  "author": "Alfred Cai",
+  "icons": {
+    "128": "hand-gesture-cancel-fuck-rule-128.png"
+  },
+  //"default_locale": "zh",
+
+  "browser_action": {
+    "default_icon": "hand-gesture-cancel-fuck-rule-128.png",
+    "default_popup": "popup.html",
+    "default_title": "课程助手"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*.shu.edu.cn/*"],
+    "js": ["lib/jquery-2.2.0.min.js"]
+  }, {
+    "matches": ["http://xk.autoisp.shu.edu.cn:*/CourseSelectionStudent/FastInput"],
+    "js": ["scripts/selectCourse.js"]
+  }, {
+    "matches": ["http://cj.shu.edu.cn/StudentPortal/Evaluate"],
+    "js": ["scripts/evaluate.js"]
+  }, {
+    "matches": ["http://xk.autoisp.shu.edu.cn:*/StudentQuery/QueryCourseTable"],
+    "js": ["scripts/beautifyTable.js"]
+  }],
+
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["background.js", "lib/jquery-2.2.0.min.js"]
+  }
+
+}
