@@ -32,7 +32,7 @@
       </ol>
     </div>
     <div id="stop-submit">      
-      <button class="btn btn-primary btn-block btn-stop" type="button">
+      <button class="btn btn-primary btn-block" type="button" id="btn-stop">
         <img src="icons/Aristotle_24.png">
         <strong>停止刷课</strong>
       </button>
@@ -40,6 +40,9 @@
   </div>
 </body>
 <script>
-
+  var button = document.getElementById("btn-stop");
+  button.addEventListener("click", function() {
+    alert(".");
+  }, false);
 </script>
 </html>

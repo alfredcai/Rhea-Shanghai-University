@@ -5,8 +5,8 @@
 
   "description": "模拟用户动作自动选课和教学评估辅助",
   "icons": {
-    "16":"icons/Aristotle_16.png",
-    "48":"icons/Aristotle_48.png",
+    "16": "icons/Aristotle_16.png",
+    "48": "icons/Aristotle_48.png",
     "128": "icons/Aristotle_128.png"
   },
   "author": "Alfred Cai",
@@ -17,19 +17,24 @@
     "default_title": "课程助手"
   },
 
-  "content_scripts": [{
-    "matches": ["*://*.shu.edu.cn/*"],
-    "js": ["lib/jquery-2.2.0.min.js"]
-  }, {
-    "matches": ["http://xk.autoisp.shu.edu.cn:*/CourseSelectionStudent/FastInput"],
-    "js": ["scripts/selectCourse.js"]
-  }, {
-    "matches": ["http://cj.shu.edu.cn/StudentPortal/Evaluate"],
-    "js": ["scripts/evaluate.js"]
-  }, {
-    "matches": ["http://xk.autoisp.shu.edu.cn:*/StudentQuery/QueryCourseTable"],
-    "js": ["scripts/beautifyTable.js"]
-  }],
+  "content_scripts": [
+    {
+      "matches": ["*://*.shu.edu.cn/*"],
+      "js": ["lib/jquery-2.2.0.min.js"]
+    }, 
+    {
+      "matches": ["http://xk.autoisp.shu.edu.cn:*/CourseSelectionStudent/FastInput"],
+      "js": ["scripts/selectCourse.js"]
+    }, 
+    {
+      "matches": ["http://cj.shu.edu.cn/StudentPortal/Evaluate"],
+      "js": ["scripts/evaluate.js"]
+    }, 
+    {
+      "matches": ["http://xk.autoisp.shu.edu.cn:*/StudentQuery/QueryCourseTable"],
+      "js": ["scripts/beautifyTable.js"]
+    }
+  ],
 
   "background": {
     "scripts": ["background.js", "lib/jquery-2.2.0.min.js"]

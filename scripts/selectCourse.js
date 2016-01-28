@@ -2,7 +2,7 @@
  * Licensed under the MIT License
  */
 
-var btn = function(button_name, class_name) {
+var Btn = function(button_name, class_name) {
 	return $('<button>')
 		.text(button_name)
 		.addClass(class_name)
@@ -10,7 +10,7 @@ var btn = function(button_name, class_name) {
 		.css('background-color', 'navajowhite')
 		.css('margin', '0px 10px 3px 30px')
 };
-var lesson = function(input_classNum, input_teaNum) {
+var Lesson = function(input_classNum, input_teaNum) {
 	return {
 		classNum: input_classNum,
 		teaNum: input_teaNum
@@ -20,7 +20,7 @@ var course = [];
 
 function startSubmit() {
 	for (var i = 0; i < 8; i++) {
-		course.push(lesson($('#CID' + i), $('#TNo' + i)));
+		course.push(Lesson($('#CID' + i), $('#TNo' + i)));
 	}
 	chrome.storage.local.set({
 			'selected': course
@@ -37,7 +37,7 @@ function clickButton() {
 }
 
 $(function() {
-	var $btn = btn('开始刷课', 'btn-interval-submit');
+	var $btn = Btn('开始刷课', 'btn-interval-submit');
 
 	$('.btn-interval-submit').click(function() {
 		

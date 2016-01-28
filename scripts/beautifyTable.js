@@ -2,7 +2,7 @@
  * Licensed under the MIT License
  */
 
-var btn = function(button_name, class_name) {
+var Btn = function(button_name, class_name) {
 	return $('<button>')
 		.text(button_name)
 		.addClass(class_name)
@@ -12,9 +12,9 @@ var btn = function(button_name, class_name) {
 };
 
 $(function() {
-	var $btn0 = btn('原样式', 'btn-normal'),
-		$btn1 = btn('删除周末', 'btn-delWeek'),
-		$btn2 = btn('添加课程名', 'btn-addLessonName')
+	var $btn0 = Btn('原样式', 'btn-normal'),
+		$btn1 = Btn('删除周末', 'btn-delWeek'),
+		$btn2 = Btn('添加课程名', 'btn-addLessonName')
 
 	$('#UserNo').before($btn0)
 		.before($btn1).before($btn2);
