@@ -2,7 +2,7 @@
  * Licensed under the MIT License
  */
 
-$(function() {
+$(function () {
 	var list = $('.tbllist tr');
 	addHeading(list[0]);
 	for (var i = 1; i < list.length - 1; i++) {
@@ -10,14 +10,14 @@ $(function() {
 	};
 	addSelectorAll(list[list.length - 1]);
 
-	$('.select-all').change(function() {
+	$('.select-all').change(function () {
 		var value = $(this).val();
-		$('select').each(function(i, e) {
+		$('select').each(function (i, e) {
 			$(e).val(value)
 		});
 	});
 
-	$('.select-tr').change(function() {
+	$('.select-tr').change(function () {
 		var $td = $(this).parent(),
 			value = $(this).val()
 		for (var i = 0; i < 4; i++) {
@@ -48,7 +48,7 @@ function addSelectorAll(tr) {
 
 function addSelector(tr) {
 	var $td = $('<td>');
-	var	$select = $('<select>')
+	var $select = $('<select>')
 		.addClass('select-tr')
 		.css('background-color', 'navajowhite')
 	$('<option>').val('0').text("单行赋值").appendTo($select);

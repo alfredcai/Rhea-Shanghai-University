@@ -2,7 +2,7 @@
  * Licensed under the MIT License
  */
 
-var Btn = function(button_name, class_name) {
+var Btn = function (button_name, class_name) {
 	return $('<button>')
 		.text(button_name)
 		.addClass(class_name)
@@ -11,19 +11,18 @@ var Btn = function(button_name, class_name) {
 		.css('margin', '0px 10px 3px 30px')
 };
 
-$(function() {
+$(function () {
 	var $btn0 = Btn('原样式', 'btn-normal'),
 		$btn1 = Btn('删除周末', 'btn-delWeek'),
 		$btn2 = Btn('添加课程名', 'btn-addLessonName')
 
-	$('#UserNo').before($btn0)
-		.before($btn1).before($btn2);
+	$('#UserNo').before($btn0).before($btn1).before($btn2);
 
-	$('.btn-normal').click(function() {
+	$('.btn-normal').click(function () {
 		InitPage();
 	});
 
-	$('.btn-delWeek').click(function() {
+	$('.btn-delWeek').click(function () {
 		var list = $('.tbllist');
 		var $table = $(list[1]);
 		for (var i = 0; i < 14; i++) {
@@ -33,7 +32,7 @@ $(function() {
 		};
 	});
 
-	$('.btn-addLessonName').click(function() {
+	$('.btn-addLessonName').click(function () {
 		$('.btn-delWeek').trigger('click');
 
 		var list = $('.tbllist');
@@ -55,7 +54,7 @@ $(function() {
 			};
 		};
 
-		location.forEach(function(e) {
+		location.forEach(function (e) {
 			$td = $table.children('tbody')
 				.children().eq(e[1])
 				.children().eq(e[2]);
@@ -103,10 +102,10 @@ function InitPage() {
 			studentNo: istudentNo
 		},
 		cache: false,
-		beforeSend: function() {
+		beforeSend: function () {
 			$("#divCourseMain").html("<div style=\"text-align:center; margin-top:10px;\"><img src='/Content/default/images/loading.gif' alt=''/></div>");
 		},
-		success: function(html) {
+		success: function (html) {
 			$("#divCourseMain").empty().html(html);
 		}
 	});

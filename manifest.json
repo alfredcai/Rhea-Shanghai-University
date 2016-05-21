@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "上海大学课程助手",
-  "version": "0.9",
+  "version": "1.01",
 
   "description": "模拟用户动作自动选课和教学评估辅助",
   "icons": {
@@ -19,29 +19,27 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.shu.edu.cn/*"],
-      "js": ["lib/jquery-2.2.0.min.js"]
+      "matches": ["http://xk.autoisp.shu.edu.cn:*/CourseSelectionStudent/FastInput","http://xk.shu.edu.cn:*/CourseSelectionStudent/FastInput"],
+      "js": ["lib/jquery-2.2.0.min.js", "scripts/selectCourse.js"]
     }, 
     {
-      "matches": ["http://xk.autoisp.shu.edu.cn:*/CourseSelectionStudent/FastInput"],
-      "js": ["scripts/selectCourse.js"]
-    }, 
+      "matches": ["http://xk.autoisp.shu.edu.cn:*/StudentQuery/QueryCourseTable","http://xk.shu.edu.cn:*/StudentQuery/QueryCourseTable"],
+      "js": ["lib/jquery-2.2.0.min.js", "scripts/beautifyTable.js"]
+    },
     {
       "matches": ["http://cj.shu.edu.cn/StudentPortal/Evaluate"],
-      "js": ["scripts/evaluate.js"]
-    }, 
-    {
-      "matches": ["http://xk.autoisp.shu.edu.cn:*/StudentQuery/QueryCourseTable"],
-      "js": ["scripts/beautifyTable.js"]
-    }
+      "js": ["lib/jquery-2.2.0.min.js", "scripts/evaluate.js"]
+    } 
   ],
 
   "background": {
-    "scripts": ["background.js", "lib/jquery-2.2.0.min.js"]
+    "scripts": ["background.js"],
+    "persistent": false
   },
 
   "permissions": [
     "tabs",
+    "alarms",
     "storage"
   ]
 }

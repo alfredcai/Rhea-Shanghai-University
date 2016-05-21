@@ -9,7 +9,7 @@
 - [License](#license)
 
 ## 实现功能
-- 模拟点击提交按钮自动刷课「暂未实现」
+- 模拟点击提交按钮自动刷课
 - 教学评估辅助选中
 - 课程表简单美化
 
@@ -23,21 +23,21 @@
 
 ## 使用说明
 - 已经在页面上添加了相应的按钮，根据名字选择就好
+- 刷课时想看到更多详细信息，可以打开浏览器控制台查看
+- 当前设定为每10秒点击一次提交按钮
 - __关于停止选课__
 	- 点击浏览器右上角的插件图标![icon](icons/Aristotle_24.png)，弹出的页面有___停止选课的按钮___
-	- 在选课系统首页也有___停止选课的按钮___
 
 ## 实现原理
-- 调用JavaScript的setInterval方法点击提交按钮
+- 调用JavaScript的setTimeOut方法点击提交按钮
 - 关于提交表单session并没有刷新的问题，只是粗糙的刷新的整个页面，利用插件支持的本地存储，将保存的课程号再次填入继续提交
 - 其他就是一些jQuery控制页面元素的调用没什么可说的
 
 ## 致谢
-- 图标来自于[ICONFINDER](https://www.iconfinder.com/)的[www.iconfinder.com/icons/362069/aristotle_avatar_beard_face_greece_greek_philosopher_platonic_scientist_icon#size=128](https://www.iconfinder.com/icons/362069/aristotle_avatar_beard_face_greece_greek_philosopher_platonic_scientist_icon)
+- 图标来自于[ICONFINDER](https://www.iconfinder.com/)的[beard_face_greece_greek_philosopher_platonic_scientist](https://www.iconfinder.com/icons/362069/aristotle_avatar_beard_face_greece_greek_philosopher_platonic_scientist_icon)
 - [jQuery](http://jquery.com)
 - [Bootstrap](http://getbootstrap.com)
 
 ## License
-- MIT licensed
 
-
+[MIT licensed](LICENSE)

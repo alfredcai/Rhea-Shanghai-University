@@ -9,6 +9,7 @@
   </style>
   <title>上海大学课程助手</title>
   <link href="lib/bootstrap.min.css" rel="stylesheet">
+  <script src="popup.js"></script>
 </head>
 <body>
   <div class="container-fluid">
@@ -19,15 +20,15 @@
     <div id="function">
       <strong class="text-danger">功能列表：</strong>
       <ol>
-        <li>模拟点击提交按钮自动刷课</li>
-        <li>教学评估辅助选中</li>
-        <li>课程表简单美化</li>
+        <li>「选课」页面，每10秒模拟点击提交按钮,自动刷课</li>
+        <li>「教学评估」页面，辅助选中，快速评估</li>
+        <li>「课表查询」页面，简化课表</li>
       </ol>
     </div>
     <div id="notice">
       <strong class="text-danger">注意事项：</strong>
       <ol>
-        <li>此刷课程序仅对限制人数的课程有效</li>
+        <li>此刷课程序仅对<code>限制人数</code>的课程有效</li>
         <li>对刷课成功与否，概不负责</li>
       </ol>
     </div>
@@ -39,10 +40,4 @@
     </div>
   </div>
 </body>
-<script>
-  var button = document.getElementById("btn-stop");
-  button.addEventListener("click", function() {
-    alert(".");
-  }, false);
-</script>
 </html>
