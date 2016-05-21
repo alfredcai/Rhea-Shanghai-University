@@ -11,17 +11,10 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 });
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
-  console.log('Alarm name:%s,time:%s,period:%s', alarm.name, alarm.scheduledTime, alarm.periodInMinutes);
-  switch (alarm.name) {
-    case 'submit':
-      chrome.storage.local.get('windowsId', function (e) {
-        var windowsId = e.windowsId;
-      });
-      break;
-    case 'refresh':
-      break;
-    default: break;
-  }
+  console.log('Alarm name:%s,time:%s,period:%s',
+    alarm.name, 
+    alarm.scheduledTime, 
+    alarm.periodInMinutes);
 });
 
 chrome.runtime.onMessage.addListener(
