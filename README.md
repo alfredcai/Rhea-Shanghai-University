@@ -1,5 +1,5 @@
-# Rhea
-上海大学课程助手 -- chrome插件(chrome extension)
+# Rhea-Shanghai-University
+上海大学刷课助手 -- chrome插件(Chrome extension)
 
 - [实现功能](https://github.com/alfredcai/Rhea#实现功能)
 - [如何安装](https://github.com/alfredcai/Rhea#如何安装)
