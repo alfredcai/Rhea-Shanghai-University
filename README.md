@@ -1,12 +1,12 @@
 # Rhea-Shanghai-University
 上海大学刷课助手 -- chrome插件(Chrome extension)
 
-- [实现功能](https://github.com/alfredcai/Rhea#实现功能)
-- [如何安装](https://github.com/alfredcai/Rhea#如何安装)
-- [使用说明](https://github.com/alfredcai/Rhea#使用说明)
-- [实现原理](https://github.com/alfredcai/Rhea#实现原理)
-- [致谢](https://github.com/alfredcai/Rhea#致谢)
-- [License](https://github.com/alfredcai/Rhea#license)
+- [实现功能](https://github.com/alfredcai/Rhea-Shanghai-University#实现功能)
+- [如何安装](https://github.com/alfredcai/Rhea-Shanghai-University#如何安装)
+- [使用说明](https://github.com/alfredcai/Rhea-Shanghai-University#使用说明)
+- [实现原理](https://github.com/alfredcai/Rhea-Shanghai-University#实现原理)
+- [致谢](https://github.com/alfredcai/Rhea-Shanghai-University#致谢)
+- [License](https://github.com/alfredcai/Rhea-Shanghai-University#license)
 
 ## 实现功能
 - 模拟点击提交按钮自动刷课
@@ -19,7 +19,7 @@
 	- 打开chrome的扩展程序，选中“开发者模式”，然后点击“加载已解压的扩展程序”按钮，选择你解压得到的目录
 	- 如果看到chrome右上角多了![icon](icons/Aristotle_24.png)图标，就OK了!
 - __方法二__
-	- 如果对程序放心的话，可以直接下载[crx文件](dist/Rhea.crx)
+	- 如果对程序放心的话，可以直接下载[crx文件](dist/Rhea-Shanghai-University.crx)
 	- 打开chrome的扩展程序，将文件拖入就可以了！	
 - 安装本软件后，每次打开浏览器会建议关闭开发者模式安装的插件，这时点取消可以保持本插件继续运行
 - 如果想__暂时停用__，请在扩展程序管理页面取消“已启用”前的对勾即可
@@ -28,7 +28,7 @@
 ## 使用说明
 - 已经在页面上添加了相应的按钮，根据名字选择就好
 - 刷课时想看到更多详细信息，可以打开浏览器控制台查看
-- 当前设定为每10秒点击一次提交按钮
+- 当前设定为每8秒点击一次提交按钮
 - __关于停止选课__
 	- 点击浏览器右上角的插件图标![icon](icons/Aristotle_24.png)，弹出的页面有___停止选课的按钮___
 

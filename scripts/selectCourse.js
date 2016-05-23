@@ -74,7 +74,7 @@ function submit_start() {
 					console.log('submit course%s:%s,%s', i + 1, a.classNum, a.teaNum);
 				}
 				$('#FastInputAction').trigger('click');
-				submit_time = setTimeout("submit_start()", 10000);
+				submit_time = setTimeout("submit_start()", 8000);
 				console.log('setTimeout id of submit:%s, the %s time to submit on %s', submit_time, submit_count++, new Date());
 			} else {
 				stop();
@@ -86,7 +86,7 @@ function submit_start() {
 function refreshPage() {
 	refresh_time = setTimeout(function () {
 		location.reload();
-	}, 60 * 1000);
+	}, 10 * 60 * 1000);
 	console.log('setTimeout id of refresh:%s on %s', refresh_time, new Date());
 }
 
