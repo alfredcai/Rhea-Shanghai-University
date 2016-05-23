@@ -65,24 +65,26 @@ var submit_time = 0, refresh_time = 0, submit_count = 1;
 function submit_start() {
 	chrome.storage.local.get('selected', function (items) {
 		var ListCourse = items.selected;
-		if (ListCourse.length > 0) {
-			for (var i in ListCourse) {
-				var a = ListCourse[i];
-				$('#CID' + i).val(a.classNum);
-				$('#TNo' + i).val(a.teaNum);
-				console.log('submit course%s:%s,%s', i + 1, a.classNum, a.teaNum);
+		if (ListCourse) {
+			if (ListCourse.length > 0) {
+				for (var i in ListCourse) {
+					var a = ListCourse[i];
+					$('#CID' + i).val(a.classNum);
+					$('#TNo' + i).val(a.teaNum);
+					console.log('submit course%s:%s,%s', i + 1, a.classNum, a.teaNum);
+				}
+				$('#FastInputAction').trigger('click');
+				submit_time = setTimeout("submit_start()", 10000);
+				console.log('setTimeout id of submit:%s, the %s time to submit on %s', submit_time, submit_count++, new Date());
+			} else {
+				stop();
 			}
-			$('#FastInputAction').trigger('click');
-			submit_time = setTimeout("submit_start()", 10000);
-			console.log('setTimeout id of submit:%s, the %s time to submit on %s', submit_time, submit_count++, new Date());
-		} else {
-			stop();
 		}
 	});
 };
 
 function refreshPage() {
-	refresh_time = setTimeout(function(){
+	refresh_time = setTimeout(function () {
 		location.reload();
 	}, 60 * 1000);
 	console.log('setTimeout id of refresh:%s on %s', refresh_time, new Date());
