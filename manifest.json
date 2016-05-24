@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "上海大学课程助手",
-  "version": "1.01",
+  "version": "1.02",
 
   "description": "模拟用户动作自动选课和教学评估辅助",
   "icons": {

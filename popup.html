@@ -1,16 +1,18 @@
-<!doctype html>
+<!doctype>
 <html>
+
 <head>
   <style>
-  body {
-    min-width: 307px;
-    overflow-x: hidden;
-  }
+    body {
+      min-width: 307px;
+      overflow-x: hidden;
+    }
   </style>
   <title>上海大学课程助手</title>
   <link href="lib/bootstrap.min.css" rel="stylesheet">
   <script src="scripts/popup.js"></script>
 </head>
+
 <body>
   <div class="container-fluid">
     <div id="title">
@@ -20,19 +22,27 @@
     <div id="function">
       <strong class="text-danger">功能列表：</strong>
       <ol>
-        <li>「选课」页面，每10秒模拟点击提交按钮,自动刷课</li>
+        <li>「选课」页面，每8秒模拟点击提交按钮,自动刷课</li>
         <li>「教学评估」页面，辅助选中，快速评估</li>
         <li>「课表查询」页面，简化课表</li>
+      </ol>
+    </div>
+    <div id="useage">
+      <strong class="text-danger">刷课：</strong>
+      <ol>
+        <li>在「快速录入」页面填写好要刷的课程之后，点击「开始自动刷课」，程序将自动每8秒点击「提交」按钮刷课。</li>
+        <li>刷课时想看到更多详细信息，可以打开「浏览器控制台」查看</li>
       </ol>
     </div>
     <div id="notice">
       <strong class="text-danger">注意事项：</strong>
       <ol>
+        <li>可以最小化浏览器，不需要将浏览器显示在最前面</li>
         <li>此刷课程序仅对<code>限制人数</code>的课程有效</li>
         <li>对刷课成功与否，概不负责</li>
       </ol>
     </div>
-    <div id="stop-submit">      
+    <div id="stop-submit">
       <button class="btn btn-primary btn-block" type="button" id="btn-stop">
         <img src="icons/Aristotle_24.png">
         <strong>停止刷课</strong>
@@ -40,4 +50,5 @@
     </div>
   </div>
 </body>
+
 </html>
