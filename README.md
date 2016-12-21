@@ -1,12 +1,12 @@
-# Rhea-Shanghai-University
+# Rhea
 上海大学刷课助手 -- chrome插件(Chrome extension)
 
-- [实现功能](https://github.com/alfredcai/Rhea-Shanghai-University#实现功能)
-- [如何安装](https://github.com/alfredcai/Rhea-Shanghai-University#如何安装)
-- [使用说明](https://github.com/alfredcai/Rhea-Shanghai-University#使用说明)
-- [实现原理](https://github.com/alfredcai/Rhea-Shanghai-University#实现原理)
-- [致谢](https://github.com/alfredcai/Rhea-Shanghai-University#致谢)
-- [License](https://github.com/alfredcai/Rhea-Shanghai-University#license)
+- [实现功能](#实现功能)
+- [如何安装](#如何安装)
+- [使用说明](#使用说明)
+- [实现原理](#实现原理)
+- [致谢](#致谢)
+- [License](#license)
 
 ## 实现功能
 - 模拟点击提交按钮自动刷课
