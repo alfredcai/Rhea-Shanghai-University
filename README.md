@@ -10,8 +10,8 @@
 
 ## 实现功能
 - 模拟点击提交按钮自动刷课
-- 教学评估辅助选中
-- 课程表简单美化
+- 教学评估简化打分
+- 课程表简单美化填入课程内容
 
 ## 如何安装
 - __方法一__
@@ -36,7 +36,6 @@
 ## 实现原理
 - 调用JavaScript的setTimeOut方法点击提交按钮
 - 关于提交表单session并没有刷新的问题，只是粗糙的刷新的整个页面，利用插件支持的本地存储，将保存的课程号再次填入继续提交
-- 其他就是一些jQuery控制页面元素的调用没什么可说的
 
 ## 致谢
 - 图标来自于[ICONFINDER](https://www.iconfinder.com/)的[beard_face_greece_greek_philosopher_platonic_scientist](https://www.iconfinder.com/icons/362069/aristotle_avatar_beard_face_greece_greek_philosopher_platonic_scientist_icon)
