@@ -9,9 +9,9 @@
 - [License](#license)
 
 ## 实现功能
-- 模拟点击提交按钮自动刷课
-- 教学评估简化打分
-- 课程表简单美化填入课程内容
+- 选课页面（xk.autoisp.shu.edu.cn:*/CourseSelectionStudent/FastInput）模拟点击提交按钮自动刷课
+- 教学评估页面（cj.shu.edu.cn/StudentPortal/Evaluate）简化打分
+- 课程表页面（xk.autoisp.shu.edu.cn:*/StudentQuery/QueryCourseTable）简单美化填入课程内容
 
 ## 如何安装
 - __方法一__

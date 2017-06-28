@@ -2,6 +2,7 @@
  * Licensed under the MIT License
  */
 
+// 定义按钮的 CSS 样式
 var Btn = function (button_name, class_name) {
 	return $('<button>')
 		.text(button_name)
@@ -15,13 +16,14 @@ $(function () {
 	var $btn0 = Btn('原样式', 'btn-normal'),
 		$btn1 = Btn('删除周末', 'btn-delWeek'),
 		$btn2 = Btn('添加课程名', 'btn-addLessonName')
-
+	// 添加按钮
 	$('#UserNo').before($btn0).before($btn1).before($btn2);
-
+	// 原样式
 	$('.btn-normal').click(function () {
 		InitPage();
 	});
 
+	// 删除周末，减少表单周六周日两列
 	$('.btn-delWeek').click(function () {
 		var list = $('.tbllist');
 		var $table = $(list[1]);
@@ -32,6 +34,7 @@ $(function () {
 		};
 	});
 
+	// 添加课程名，减少周六周日两列之外，再把课程名显示在表单上
 	$('.btn-addLessonName').click(function () {
 		$('.btn-delWeek').trigger('click');
 
@@ -68,6 +71,7 @@ $(function () {
 	});
 });
 
+// 改变表单的宽度
 function setTableWidth(table) {
 	var $table = $(table);
 	var $tr = $table.children('tbody').children().eq(0);
@@ -77,6 +81,7 @@ function setTableWidth(table) {
 	};
 };
 
+// 将已选课程的信息以数组的形式返回
 function getCourse_Array(list) {
 	var course = [];
 	var $tr_list = $(list[0]).children().children();
@@ -92,7 +97,7 @@ function getCourse_Array(list) {
 	return course;
 };
 
-//Copy from the webpage's head.script code
+// 从原页面的源代码拷贝过来的
 function InitPage() {
 	var istudentNo = $("#UserNo").val();
 	$.ajax({
