@@ -1,7 +1,6 @@
 /* @author Alfred Cai
  * Licensed under the MIT License
  */
-
 // 定义按钮CSS样式
 var Btn = function (button_name, class_name) {
 	return $("<input type='button'>")
@@ -98,10 +97,10 @@ function submit_start() {
 };
 
 // 刷新页面函数，10分钟后刷新
-function refreshPage() {
+function refreshPage(x) {
 	refresh_id = setTimeout(function () {
 		location.reload();
-	}, 10 * 60 * 1000);
+	}, x * 60 * 1000);
 	console.log('setTimeout id of refresh:%s on %s', refresh_id, new Date());
 }
 
@@ -119,10 +118,19 @@ function stop() {
 	}
 }
 
+
+
+
+
 chrome.storage.local.get('selected', function (items) {
 	var ListCourse = items.selected;
 	if (ListCourse.length > 0) {
-		refreshPage();
+		if(document.getElementById('FastInputAction')){
+		refreshPage(10);
 		submit_start();
 	}
-});
+	else{
+		console.log('选课尚未开始,时间:%s',new Date())
+		refreshPage(0.1);
+	}
+}});
