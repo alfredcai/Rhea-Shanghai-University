@@ -102,23 +102,10 @@ chrome.storage.local.get('selected', function (items) {
 	}
 	else{
 		console.log('选课尚未开始,时间:%s',new Date())
-		refreshPage(0.1);
+		refreshPage(1);
 	}
 }});
 
 
 
 
-
-chrome.storage.local.get('selected', function (items) {
-	var ListCourse = items.selected;
-	if (ListCourse.length > 0) {
-		if(document.getElementById('FastInputAction')){
-		refreshPage(10);
-		submit_start();
-	}
-	else{
-		console.log('选课尚未开始,时间:%s',new Date())
-		refreshPage(0.1);
-	}
-}});
