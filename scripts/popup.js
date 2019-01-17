@@ -28,8 +28,17 @@ document.addEventListener('DOMContentLoaded', function () {
             ListCourse.push(Lesson(classnum[i].value,teanum[i].value))
         }
         chrome.storage.local.set({'selected':ListCourse})
-        alert('请手动刷新选课网站以开启自动监测')
-    }
-)
+        alert('数据已存入，请打开快速录入界面，若已打开，请刷新.之后即可开始自动刷课');  
+    })
+    chrome.storage.local.get('selected',function(items){
+        let ListCourse = items.selected;
+        let classnum = document.getElementsByClassName('input_classnum');
+        let teanum = document.getElementsByClassName('input_teachernum');
+        for(let i = 0;i<ListCourse.length;i++){
+            classnum[i].value=ListCourse[i].classNum;
+            teanum[i].value=ListCourse[i].teaNum;
+        }
+    })
+
 }
 )
