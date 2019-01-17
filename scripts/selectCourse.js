@@ -1,15 +1,6 @@
 /* @author Alfred Cai
  * Licensed under the MIT License
  */
-// 定义按钮CSS样式
-var Btn = function (button_name, class_name) {
-	return $("<input type='button'>")
-		.val(button_name)
-		.addClass(class_name)
-		.css('width', '100px')
-		.css('background-color', 'navajowhite')
-		.css('margin', '0px 20px')
-};
 
 // 定义课程类
 var Lesson = function (input_classNum, input_teaNum) {
@@ -19,23 +10,6 @@ var Lesson = function (input_classNum, input_teaNum) {
 	}
 };
 
-// 在页面加载完成后添加事件监听
-$(function () {
-	// 在页面上添加按钮
-	var $btn_submit = Btn('开始自动刷课', 'btn-interval-submit');
-	$('#FastInputAction').before($btn_submit);
-	// 在新的按钮上添加事件监听
-	$('.btn-interval-submit').click(function () {
-		if (initAndSave()) {
-			refreshPage();
-			submit_start();
-		}
-	});
-
-	$('.btn-refresh').click(function () {
-		location.reload();
-	});
-});
 // 初始化选课
 function initAndSave() {
 	// 清空 chrome 本地存储中“selected”的值
@@ -117,6 +91,20 @@ function stop() {
 		console.log('clear timeout of refresh:%s', refresh_id);
 	}
 }
+
+
+chrome.storage.local.get('selected', function (items) {
+	var ListCourse = items.selected;
+	if (ListCourse.length > 0) {
+		if(document.getElementById('FastInputAction')){
+		refreshPage(10);
+		submit_start();
+	}
+	else{
+		console.log('选课尚未开始,时间:%s',new Date())
+		refreshPage(0.1);
+	}
+}});
 
 
 
