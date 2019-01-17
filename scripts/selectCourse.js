@@ -61,7 +61,7 @@ function submit_start() {
 			$('#FastInputAction').trigger('click');
 			submit_campus = setTimeout("$('#NotCollegeAction').trigger('click')",3000);
 			// 设置每8秒点击一次按钮
-			submit_id = setTimeout("submit_start()", 8000);
+			submit_id = setTimeout("submit_start()", 6000);
 			console.log('setTimeout id of submit:%s, the %s time to submit on %s',
 				submit_id, submit_count++, new Date());
 		} else {
